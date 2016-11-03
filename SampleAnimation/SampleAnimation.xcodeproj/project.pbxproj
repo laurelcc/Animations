@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5112B6221DCB26640046C595 /* KeyFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5112B6211DCB26640046C595 /* KeyFrameViewController.swift */; };
 		512A9BB01DC97956005FDA00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A9BAF1DC97956005FDA00 /* AppDelegate.swift */; };
 		512A9BB51DC97956005FDA00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512A9BB31DC97956005FDA00 /* Main.storyboard */; };
 		512A9BB71DC97956005FDA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 512A9BB61DC97956005FDA00 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5112B6211DCB26640046C595 /* KeyFrameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyFrameViewController.swift; sourceTree = "<group>"; };
 		512A9BAC1DC97956005FDA00 /* SampleAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		512A9BAF1DC97956005FDA00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		512A9BB41DC97956005FDA00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5112B6201DCB24FA0046C595 /* Keyframe */ = {
+			isa = PBXGroup;
+			children = (
+				5112B6211DCB26640046C595 /* KeyFrameViewController.swift */,
+			);
+			name = Keyframe;
+			sourceTree = "<group>";
+		};
 		512A9BA31DC97955005FDA00 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		512A9BAE1DC97956005FDA00 /* SampleAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				5112B6201DCB24FA0046C595 /* Keyframe */,
 				512A9BC11DC9BB2B005FDA00 /* PullDrag */,
 				512A9BAF1DC97956005FDA00 /* AppDelegate.swift */,
 				512A9BB31DC97956005FDA00 /* Main.storyboard */,
@@ -171,6 +182,7 @@
 				512A9BC31DC9C404005FDA00 /* CollectionViewController.swift in Sources */,
 				512A9BB01DC97956005FDA00 /* AppDelegate.swift in Sources */,
 				512A9BCF1DC9D060005FDA00 /* PathFile.m in Sources */,
+				5112B6221DCB26640046C595 /* KeyFrameViewController.swift in Sources */,
 				512A9BC51DC9C45A005FDA00 /* PrimeFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +350,7 @@
 				512A9BC01DC97956005FDA00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

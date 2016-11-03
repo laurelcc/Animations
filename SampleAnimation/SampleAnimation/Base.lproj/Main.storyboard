@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oZc-DD-Lbw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,18 +18,74 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="5kB-PO-vdH" kind="relationship" relationship="rootViewController" id="WUq-ed-cdA"/>
+                        <segue destination="rZi-gu-Ys5" kind="relationship" relationship="rootViewController" id="Ov9-yZ-cNJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1Z-b7-1ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-494" y="-61"/>
         </scene>
+        <!--Key Frame View Controller-->
+        <scene sceneID="ZVM-dt-GXe">
+            <objects>
+                <viewController id="rZi-gu-Ys5" customClass="KeyFrameViewController" customModule="SampleAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v5f-cH-x12"/>
+                        <viewControllerLayoutGuide type="bottom" id="85q-34-o5G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="czU-cP-rq0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seven" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq9-rZ-sTt">
+                                <rect key="frame" x="137" y="283.5" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.14115035379999999" blue="0.33685588700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="VSq-qI-dou"/>
+                                    <constraint firstAttribute="width" constant="100" id="dFP-Kq-CEi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktf-YD-7SX">
+                                <rect key="frame" x="177.5" y="255" width="20" height="20"/>
+                                <color key="backgroundColor" red="1" green="0.40814863899999998" blue="0.57687033659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="3mS-Uv-kxV"/>
+                                    <constraint firstAttribute="width" constant="20" id="G6q-8Q-Aeu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sq9-rZ-sTt" firstAttribute="centerX" secondItem="czU-cP-rq0" secondAttribute="centerX" id="4pI-Kt-suV"/>
+                            <constraint firstItem="ktf-YD-7SX" firstAttribute="centerX" secondItem="czU-cP-rq0" secondAttribute="centerX" id="78V-HZ-1Yi"/>
+                            <constraint firstItem="Sq9-rZ-sTt" firstAttribute="top" secondItem="ktf-YD-7SX" secondAttribute="bottom" constant="8.5" id="mU2-1g-Qfr"/>
+                            <constraint firstItem="Sq9-rZ-sTt" firstAttribute="centerY" secondItem="czU-cP-rq0" secondAttribute="centerY" id="oyt-Dv-wTx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EzA-58-F22">
+                        <barButtonItem key="leftBarButtonItem" systemItem="redo" id="Dji-pp-5YO">
+                            <connections>
+                                <action selector="buttonClick:" destination="rZi-gu-Ys5" id="CbJ-5p-w8P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="smallBlockView" destination="ktf-YD-7SX" id="Czc-yK-eed"/>
+                        <outlet property="targetLabel" destination="Sq9-rZ-sTt" id="mEY-4T-w7M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Za0-iB-50G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301.60000000000002" y="-67.016491754122939"/>
+        </scene>
         <!--Premie-->
         <scene sceneID="LtN-CI-vy8">
             <objects>
                 <collectionViewController id="5kB-PO-vdH" customClass="CollectionViewController" customModule="SampleAnimation" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="LBz-ch-Y09">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="LBz-ch-Y09">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,7 +129,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mK-qD-Fn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="277.60000000000002" y="-62.518740629685162"/>
+            <point key="canvasLocation" x="1102" y="-45"/>
         </scene>
     </scenes>
 </document>
