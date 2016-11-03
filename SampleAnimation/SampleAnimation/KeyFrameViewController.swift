@@ -24,7 +24,47 @@ class KeyFrameViewController: UIViewController {
 //        orbitAnimation()
         
         
-        moveAnimation()
+//        moveAnimation()
+        
+        shuffleAnimation()
+    }
+    
+    func shuffleAnimation() -> Void {
+        //z-index
+        let zPosition = CABasicAnimation(keyPath: "zPosition")
+        zPosition.fromValue = -1
+        zPosition.toValue = 1
+        zPosition.duration = 1.2
+        
+        zPosition.fillMode = kCAFillModeForwards
+        zPosition.isRemovedOnCompletion = false
+        
+        //rotation
+        let rotation = CAKeyframeAnimation(keyPath: "transform.rotation")
+        rotation.values = [0, 0.14, 0]
+        rotation.duration = 1.2
+        rotation.beginTime = 0.3
+        rotation.timingFunctions = [CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut), CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)]
+        
+        //position
+        let position = CAKeyframeAnimation(keyPath: "position")
+        position.values = [CGPoint.zero, CGPoint(x: 110, y:-20), CGPoint.zero]
+        position.isAdditive = true
+        position.duration = 1.2
+        position.timingFunctions = [CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut), CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)]
+        
+        let group: CAAnimationGroup = CAAnimationGroup()
+        group.animations = [position, rotation, zPosition ]
+        group.duration = 1.2
+        group.beginTime = CACurrentMediaTime() + 0.5
+        
+        targetLabel.layer.add(group, forKey: "group animation")
+        
+        targetLabel.layer.zPosition = -1
+        
+        
+        print(targetLabel.layer.zPosition)
+        
     }
     
     func moveAnimation() {
