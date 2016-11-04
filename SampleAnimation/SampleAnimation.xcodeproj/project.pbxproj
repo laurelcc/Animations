@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5104DC291DCC4428007D919B /* ClockLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104DC281DCC4428007D919B /* ClockLayer.swift */; };
+		5104DC2B1DCC76BD007D919B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5104DC2A1DCC76BD007D919B /* AVFoundation.framework */; };
 		5112B6221DCB26640046C595 /* KeyFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5112B6211DCB26640046C595 /* KeyFrameViewController.swift */; };
 		512A9BB01DC97956005FDA00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A9BAF1DC97956005FDA00 /* AppDelegate.swift */; };
 		512A9BB51DC97956005FDA00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512A9BB31DC97956005FDA00 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5104DC281DCC4428007D919B /* ClockLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockLayer.swift; sourceTree = "<group>"; };
+		5104DC2A1DCC76BD007D919B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5112B6211DCB26640046C595 /* KeyFrameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyFrameViewController.swift; sourceTree = "<group>"; };
 		512A9BAC1DC97956005FDA00 /* SampleAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		512A9BAF1DC97956005FDA00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5104DC2B1DCC76BD007D919B /* AVFoundation.framework in Frameworks */,
 				512A9BC81DC9CCCE005FDA00 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5104DC271DCC43C3007D919B /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				5104DC281DCC4428007D919B /* ClockLayer.swift */,
+			);
+			name = Clock;
+			sourceTree = "<group>";
+		};
 		5112B6201DCB24FA0046C595 /* Keyframe */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +87,7 @@
 		512A9BAE1DC97956005FDA00 /* SampleAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				5104DC271DCC43C3007D919B /* Clock */,
 				5112B6201DCB24FA0046C595 /* Keyframe */,
 				512A9BC11DC9BB2B005FDA00 /* PullDrag */,
 				512A9BAF1DC97956005FDA00 /* AppDelegate.swift */,
@@ -100,6 +114,7 @@
 		512A9BC61DC9CCCE005FDA00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5104DC2A1DCC76BD007D919B /* AVFoundation.framework */,
 				512A9BC71DC9CCCE005FDA00 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
@@ -183,6 +198,7 @@
 				512A9BB01DC97956005FDA00 /* AppDelegate.swift in Sources */,
 				512A9BCF1DC9D060005FDA00 /* PathFile.m in Sources */,
 				5112B6221DCB26640046C595 /* KeyFrameViewController.swift in Sources */,
+				5104DC291DCC4428007D919B /* ClockLayer.swift in Sources */,
 				512A9BC51DC9C45A005FDA00 /* PrimeFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,14 +8,26 @@
 
 import UIKit
 
-class KeyFrameViewController: UIViewController {
+class KeyFrameViewController: UIViewController, UIViewControllerTransitioningDelegate {
     @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var smallBlockView: UIView!
+    
+    @IBOutlet weak var clockView: UIView!
+    var clockLayer:ClockLayer!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.clockLayer = ClockLayer()
+        self.clockLayer.datetime = NSDate()
+        
+        clockLayer.position = CGPoint(x: self.clockView.bounds.width/2, y: clockView.bounds.height/2)
+        
+        self.clockView.layer.addSublayer(clockLayer)
     }
     
     @IBAction func buttonClick(_ sender: UIBarButtonItem) {
@@ -27,6 +39,15 @@ class KeyFrameViewController: UIViewController {
 //        moveAnimation()
         
         shuffleAnimation()
+        
+        
+    }
+    
+    @IBAction func pickerValueChanged(_ sender: UIDatePicker) {
+        
+        self.clockLayer.setValue(sender.date, forKey: "datetime")
+        
+        print("new date time")
     }
     
     func shuffleAnimation() -> Void {

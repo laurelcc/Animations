@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -56,13 +57,38 @@
                                     <constraint firstAttribute="width" constant="20" id="G6q-8Q-Aeu"/>
                                 </constraints>
                             </view>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="DNn-p0-FXZ">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <color key="backgroundColor" red="1" green="0.61965544459999999" blue="0.46579410389999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="Kxu-H8-TvD"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="499926616.601794">
+                                    <!--2016-11-04 04:30:16 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="pickerValueChanged:" destination="rZi-gu-Ys5" eventType="valueChanged" id="fNF-p1-9NY"/>
+                                </connections>
+                            </datePicker>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpx-ml-G8w">
+                                <rect key="frame" x="67" y="84" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Sq9-rZ-sTt" firstAttribute="centerX" secondItem="czU-cP-rq0" secondAttribute="centerX" id="4pI-Kt-suV"/>
+                            <constraint firstAttribute="trailing" secondItem="DNn-p0-FXZ" secondAttribute="trailing" id="59I-EI-5KV"/>
                             <constraint firstItem="ktf-YD-7SX" firstAttribute="centerX" secondItem="czU-cP-rq0" secondAttribute="centerX" id="78V-HZ-1Yi"/>
+                            <constraint firstAttribute="trailing" secondItem="lpx-ml-G8w" secondAttribute="trailing" constant="68" id="EEu-xW-qbK"/>
+                            <constraint firstItem="lpx-ml-G8w" firstAttribute="leading" secondItem="czU-cP-rq0" secondAttribute="leading" constant="67" id="IrX-WY-93Y"/>
+                            <constraint firstItem="DNn-p0-FXZ" firstAttribute="leading" secondItem="czU-cP-rq0" secondAttribute="leading" id="PyX-53-zYd"/>
+                            <constraint firstItem="lpx-ml-G8w" firstAttribute="top" secondItem="czU-cP-rq0" secondAttribute="topMargin" constant="84" id="VkR-lV-3R2"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="lpx-ml-G8w" secondAttribute="bottom" constant="343" id="XjB-26-vTU"/>
                             <constraint firstItem="Sq9-rZ-sTt" firstAttribute="top" secondItem="ktf-YD-7SX" secondAttribute="bottom" constant="8.5" id="mU2-1g-Qfr"/>
                             <constraint firstItem="Sq9-rZ-sTt" firstAttribute="centerY" secondItem="czU-cP-rq0" secondAttribute="centerY" id="oyt-Dv-wTx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="DNn-p0-FXZ" secondAttribute="bottom" id="unY-1z-idd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EzA-58-F22">
@@ -73,6 +99,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="clockView" destination="lpx-ml-G8w" id="5go-h9-c0j"/>
                         <outlet property="smallBlockView" destination="ktf-YD-7SX" id="Czc-yK-eed"/>
                         <outlet property="targetLabel" destination="Sq9-rZ-sTt" id="mEY-4T-w7M"/>
                     </connections>
@@ -85,7 +112,7 @@
         <scene sceneID="LtN-CI-vy8">
             <objects>
                 <collectionViewController id="5kB-PO-vdH" customClass="CollectionViewController" customModule="SampleAnimation" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="LBz-ch-Y09">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="LBz-ch-Y09">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
